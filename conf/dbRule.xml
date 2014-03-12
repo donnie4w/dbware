@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="gbk"?>
+<dbRule>
+
+	<group name="datasource">
+		<master>master</master>
+	</group>
+</dbRule>

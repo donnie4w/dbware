@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="gbk"?>
+<dbware>
+	<username>root</username>
+	<password>123456</password>
+	<characterSet>utf-8</characterSet>
+	<bindAddress>0.0.0.0</bindAddress>
+	<port>8660</port>
+	<maxConnections>1000</maxConnections>
+	<!-- default 0:off ;(unit:second) -->
+	<slowSql>0</slowSql>
+	<!-- 0:off;1:on(record all the sql)-->
+	<general_log>1</general_log>
+	<!-- servers 节点信息用于集群分布式，配置的地址之间应该可以互相访问,如果不需要集群,可以去掉该节点 -->
+	<servers>
+		<local>127.0.0.1:3032</local>
+		<remote>127.0.0.1:3031</remote>
+	</servers>
+	<!-- 客户端操作连接端口 -->
+	<cport>3355</cport>
+</dbware>

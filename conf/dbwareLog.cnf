@@ -1,0 +1,37 @@
+log4j.logger.com.dbware.db=debug,console,fileLogger
+log4j.logger.com.dbware.mysql=debug,console,fileLogger
+log4j.logger.com.dbware.listener=debug,console,fileLogger
+log4j.logger.com.dbware.cluster.monitor=debug,monitorLogger
+log4j.logger.com.dbware.statistics.record.SlowSqlRecord=debug,slowSqlLogger
+log4j.logger.com.dbware.statistics.record.GeneralSqlRecord=debug,generalSqlLogger
+log4j.logger.com.mchange.v2=off
+log4j.appender.fileLogger.encoding=utf-8
+log4j.appender.BORROW.encoding=utf-8
+
+log4j.appender.fileLogger=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.fileLogger.File=./log/dbware.log
+log4j.appender.fileLogger.DatePattern = '.'yyyy-MM-dd
+log4j.appender.fileLogger.layout=org.apache.log4j.PatternLayout
+log4j.appender.fileLogger.layout.ConversionPattern=[%t] [%d] [%-5p] %c %m%n
+
+log4j.appender.monitorLogger=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.monitorLogger.File=./log/monitor.log
+log4j.appender.monitorLogger.DatePattern='.'yyyy-MM-dd
+log4j.appender.monitorLogger.layout=org.apache.log4j.PatternLayout
+log4j.appender.monitorLogger.layout.ConversionPattern=[%d] %m%n
+
+log4j.appender.slowSqlLogger=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.slowSqlLogger.File=./log/slowSql.log
+log4j.appender.slowSqlLogger.DatePattern='.'yyyy-MM-dd
+log4j.appender.slowSqlLogger.layout=org.apache.log4j.PatternLayout
+log4j.appender.slowSqlLogger.layout.ConversionPattern=[%d] %m%n
+
+log4j.appender.generalSqlLogger=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.generalSqlLogger.File=./log/generalSql.log
+log4j.appender.generalSqlLogger.DatePattern='.'yyyy-MM-dd
+log4j.appender.generalSqlLogger.layout=org.apache.log4j.PatternLayout
+log4j.appender.generalSqlLogger.layout.ConversionPattern=[%d] %m%n
+
+log4j.appender.console=org.apache.log4j.ConsoleAppender
+log4j.appender.console.layout=org.apache.log4j.PatternLayout
+log4j.appender.console.layout.ConversionPattern=[%t] %d [%-5p] - %c %m%n

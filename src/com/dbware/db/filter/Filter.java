@@ -1,0 +1,9 @@
+package com.dbware.db.filter;
+
+/**
+ * @Copyright 2012-2013 donnie(donnie4w@gmail.com)
+ * @date 2012-12-18
+ * @verion 1.0
+ */
+public interface Filter {
+}
